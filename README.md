@@ -1,50 +1,49 @@
-#📱 Facebook Testing With Appium
+📱 Facebook Testing With Appium
 
-Automated UI Testing for the Facebook Android Application using Appium & Java
+Automated UI Testing for the Facebook Android Application using Appium and Java.
 
 🚀 Overview
 
-This project is focused on automating the Facebook Android mobile application using Appium and Java.
-It demonstrates how to:
+This project focuses on automating the Facebook Android App using Appium.
+It demonstrates how to launch the app, interact with UI elements, inspect components, and run automated Android test flows.
 
-Launch the Facebook app
+This repository is ideal for:
 
-Interact with mobile UI elements
+QA Engineers
 
-Use Appium Inspector to locate elements
+Automation Testers
 
-Execute automated test flows
-
-Validate Facebook app behavior on Android devices
-
-This repository is ideal for QA engineers, automation testers, and students learning mobile automation.
+Students learning Mobile Automation
 
 🧩 Features
 
-✔ Automates Facebook Android application
-✔ Works on real devices and emulators
+✔ Automates Facebook Android App
+
+✔ Works on real devices & emulators
+
 ✔ Uses Appium + Java
-✔ Supports Android 8+
-✔ Uses Desired Capabilities for easy configuration
-✔ Follows a clean project structure
-✔ Highly extendable
+
+✔ Clean project structure
+
+✔ Extendable for more scenarios
+
+✔ Uses Desired Capabilities for configuration
 
 🛠 Tech Stack
 Component	Purpose
 Appium	Mobile UI Automation
-Java	Automation scripting
+Java	Test scripting
+Android Studio	SDK, Device Manager
 TestNG / JUnit	Test execution
-Maven/Gradle	Dependency management
-ADB (Android Debug Bridge)	Device communication
-Appium Inspector / UIAutomator Viewer	Element inspection
-Android Studio	SDK, Tools, Emulator
+Maven	Dependency management
+ADB	Device communication
+Appium Inspector	Inspecting UI elements
 📦 Project Structure
 FacebookTestingWithAppium/
 │
 ├── src/
 │   ├── test/java/
 │   │   ├── base/
-│   │   │   └── BaseTest.java
 │   │   ├── pages/
 │   │   └── tests/
 │   │
@@ -55,31 +54,29 @@ FacebookTestingWithAppium/
 
 📱 Prerequisites
 
-Make sure the following tools are installed:
-
-🔧 Required Tools
+Make sure you have:
 
 Java JDK 8 or above
 
 Android Studio
 
-Appium Server (Desktop or CLI)
+Node.js
+
+Appium Server (GUI or CLI)
 
 Appium Inspector
 
-Node.js & NPM
+USB Debugging enabled
 
-USB Debugging enabled on device
+Real device or emulator
 
-A real Android device or emulator
-
-📦 Installation
-1. Clone the repository
+🔧 Installation
+1️⃣ Clone the repository
 git clone https://github.com/your-username/FacebookTestingWithAppium.git
 
-2. Install dependencies (Maven)
+2️⃣ Install dependencies (Maven)
 
-Add this to pom.xml:
+Add inside pom.xml:
 
 <dependencies>
     <dependency>
@@ -94,10 +91,7 @@ Add this to pom.xml:
     </dependency>
 </dependencies>
 
-⚙ Appium Configuration (Desired Capabilities)
-
-These are the capabilities required to launch the Facebook app:
-
+⚙ Appium Desired Capabilities
 caps.setCapability("platformName", "Android");
 caps.setCapability("deviceName", "Android Device");
 caps.setCapability("automationName", "UiAutomator2");
@@ -105,62 +99,65 @@ caps.setCapability("appPackage", "com.facebook.katana");
 caps.setCapability("appActivity", "com.facebook.katana.LoginActivity");
 caps.setCapability("noReset", true);
 
-▶️ How to Run
-Step 1: Start Appium Server
+▶️ How to Run the Tests
+1️⃣ Start Appium Server
 appium
 
-Step 2: Connect Android Device
+2️⃣ Connect the device
 adb devices
 
 
-Ensure your device appears in the list.
+You should see your device listed.
 
-Step 3: Run Tests
+3️⃣ Run the tests
 mvn clean test
 
 🎯 What This Project Demonstrates
 
-This project covers:
+Launching the Facebook app using Appium
 
-Launching Facebook app using Appium
+Interacting with Android UI elements
 
-Interacting with UI elements
+Inspecting elements with Appium Inspector
 
-Locating elements using Inspector
+Using waits (implicit & explicit)
 
-Handling waits & timeouts
+Setting Desired Capabilities
 
-Basic flow automation
+Automating basic flows
 
-Understanding the Facebook app structure
-
-Best practices for Android automation
+Understanding Facebook app UI structure
 
 📚 Facebook App Components Covered
 
-App launch and verification
+Opening the app
 
-Finding elements using IDs, XPaths
-
-Entering text in input fields
+Locating elements
 
 Clicking buttons
 
-Navigating screens
+Typing inside input fields
 
-Understanding Facebook’s UI hierarchy
+Navigation within screens
+
+Handling dynamic UI elements
 
 🧱 Future Enhancements
 
-🔹 Add Allure or Extent Reports
-🔹 Add parallel execution
-🔹 Add CI/CD integration (GitHub Actions)
-🔹 Add support for iOS
-🔹 Add screen recording during tests
-🔹 Add cloud device execution (BrowserStack, LambdaTest)
+Add video recording
+
+Add Allure / Extent reporting
+
+Add CI/CD (GitHub Actions)
+
+Add parallel execution
+
+Add cross-device support
+
+Add cloud device execution (BrowserStack, LambdaTest)
 
 🧑‍💻 Author
 
 Mohit Dayma
-Automation & Android Enthusiast
+Mobile Automation Enthusiast
 📍 India
